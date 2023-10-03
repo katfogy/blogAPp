@@ -1,2 +1,24 @@
-# blogApp
-Discover the blog app website, developed to provide a fully functional online experience. It enables users to explore into a world of enriching content. Empowering readers to actively engage with the material, by facilitating seamless interaction through the addition of comments and the ability to express appreciation by liking posts. 
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
