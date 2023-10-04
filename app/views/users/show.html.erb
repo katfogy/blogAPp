@@ -1,1 +1,19 @@
-<h1>A given User detail with posts</h1>
+<section>
+  <div>
+    <%= render @user %>
+  </div>
+  <div class="user-card">
+    <div class="user-info border-deco">
+      <h3>Bio</h3>
+      <p>
+        <%= @user.bio%>
+      </p>
+    </div>
+    <div>
+      <%= render partial: "posts/post", collection: @user.posts %>
+    </div>
+  </div>
+  <div class="post-btn d-flex">
+    <%= button_tag "See All Posts", class: "posts-btn border-deco", onclick: "window.location.href='/users/#{@user.id}/posts'" %>
+  </div>
+</section>
