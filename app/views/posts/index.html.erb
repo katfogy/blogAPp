@@ -1,1 +1,18 @@
-<h1>list of posts for a given user</h1>
+<div class="bio-card">
+  <%= render @user %>
+</div>
+<div class="bio-card">
+  <% @user.posts.each_with_index do |post, index|%>
+    <div class="comment-bio-card">
+      <%= render partial: "post", locals: { post_counter: index, post: post } %>
+    </div>
+    <div class="comments-card border-deco">
+      <% post.recent_comments.each do |comment|%>
+        <p class="d-flex"><span><%= comment.author.name %>:</span><span><%= comment.text %></span></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<div class="post-btn-card d-flex">
+    <button class="posts-btn border-deco">Pagination</button>
+</div>
