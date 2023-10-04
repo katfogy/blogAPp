@@ -1,75 +1,75 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-  }
-  
-  .d-flex {
-    display: flex;
-  }
-  
-  .border-deco {
-    border: 1.5px solid #000;
-    border-radius: 10px;
-  }
-  
-  .comment-card {
-    margin-top: 1rem;
-    padding: 1rem;
-  }
-  
-  .comments-card p {
-    gap: 1rem;
-  }
-  
-  .comment-card .comment-info p {
-    margin-top: 1rem;
-  }
-  
-  .comment-card .counter-card {
-    margin-top: 1rem;
-    justify-content: flex-end;
-    gap: 1rem;
-  }
-  
-  .comment-bio-card {
-    margin: 1rem 1rem 0 1rem;
-  }
-  
-  .comments-card {
-    margin: 0 1rem;
-    padding: 0.5rem;
-  }
-  
-  .post-details-card {
-    margin: 1rem;
-  }
-  
-  .post-details-card .single-post-info {
-    padding: 1rem;
-  }
-  
-  .post-details-card .single-post-info .title-details {
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.8rem;
-  }
-  
-  .post-details-card .single-post-info .title-details p {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .post-details-card .single-post-info .title-details span {
-    margin: 0 1rem;
-  }
-  
-  .post-details-card .comments-card {
-    margin: 10px 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
 
-  .posts-btn{
-    margin: 10px auto;
-    padding: 10px 20px;
-  }
+.d-flex {
+  display: flex;
+}
+
+.border-deco {
+  border: 1.5px solid #000;
+  border-radius: 10px;
+}
+
+.comment-card {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.comments-card p {
+  gap: 1rem;
+}
+
+.comment-card .comment-info p {
+  margin-top: 1rem;
+}
+
+.comment-card .counter-card {
+  margin-top: 1rem;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.comment-bio-card {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.comments-card {
+  margin: 0 1rem;
+  padding: 0.5rem;
+}
+
+.post-details-card {
+  margin: 1rem;
+}
+
+.post-details-card .single-post-info {
+  padding: 1rem;
+}
+
+.post-details-card .single-post-info .title-details {
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.8rem;
+}
+
+.post-details-card .single-post-info .title-details p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.post-details-card .single-post-info .title-details span {
+  margin: 0 1rem;
+}
+
+.post-details-card .comments-card {
+  margin: 10px 0;
+}
+
+.posts-btn {
+  margin: 10px auto;
+  padding: 10px 20px;
+}
