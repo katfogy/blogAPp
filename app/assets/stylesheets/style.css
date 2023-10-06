@@ -121,3 +121,41 @@ body {
 .post-btn .posts-btn {
   padding: 1rem;
 }
+
+.form-card {
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-card-margin {
+  margin: 1rem;
+}
+
+.form-card label {
+  font-weight: bold;
+}
+
+.form-card input[type="text"],
+.form-card textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-card textarea {
+  height: 120px;
+}
+
+.form-card input[type="submit"] {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
