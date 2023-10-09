@@ -3,10 +3,10 @@ require 'rails_helper'
 describe 'User Show Page Features', type: :feature, js: true do
   before :each do
     @user1 = User.create(
-        name: 'Ruby Guy',
-        photo: 'https://images.unsplash.com/photo-1696537768609-1cf03f53e893?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
-        bio: 'user1 Pix',
-        posts_count: 5
+      name: 'Ruby Guy',
+      photo: 'https://images.unsplash.com/photo-1696537768609-1cf03f53e893?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
+      bio: 'user1 Pix',
+      posts_count: 5
     )
 
     Post.create(id: 4, title: 'Post 1', text: 'text 1', likes_counter: 0, comments_counter: 0, author_id: @user1.id)
