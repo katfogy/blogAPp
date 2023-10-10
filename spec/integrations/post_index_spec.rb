@@ -25,7 +25,7 @@ describe 'Post Index Page Features', type: :feature, js: true do
 
   it 'can see the user\'s profile picture' do
     visit user_posts_path(@user1.id)
-    expect(page).to have_css('.profile')
+    expect(page).to have_css('.comment-bio-card')
   end
 
   it 'can see the user\'s username' do

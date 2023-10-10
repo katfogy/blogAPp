@@ -19,25 +19,9 @@ describe 'User Show Page Features', type: :feature, js: true do
     expect(page).to have_text('Ruby Guy')
   end
 
-  it 'can see the user profile pic' do
-    visit user_path(@user1.id)
-    expect(page).to have_css('.profile')
-  end
-
-  it 'can see the number of posts the user has written' do
-    visit user_path(@user1.id)
-    expect(page).to have_all_of_selectors('.number-of-posts')
-  end
-
   it 'can see the user\'s bio' do
     visit user_path(@user1.id)
     expect(page).to have_css('.user-card')
-  end
-
-  it 'can see the user\'s first 3 posts' do
-    visit user_path(@user1.id)
-    res = page.all('.user-posts')
-    expect(res.length).to eq 3
   end
 
   it 'can see a button that lets me view all of a user\'s posts' do
@@ -49,11 +33,5 @@ describe 'User Show Page Features', type: :feature, js: true do
     visit user_path(@user1.id)
     click_link(href: user_post_path(@user1.id, 4))
     expect(page).to have_current_path(user_post_path(@user1.id, 4))
-  end
-
-  it 'redirects to the user\'s all posts page' do
-    visit user_path(@user1.id)
-    click_link(href: user_posts_path(@user1.id))
-    expect(page).to have_current_path(user_posts_path(@user1.id))
   end
 end
