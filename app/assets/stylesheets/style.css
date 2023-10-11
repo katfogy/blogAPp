@@ -184,3 +184,12 @@ ul li {
   color: #ffff;
   border: none;
 }
+
+.field {
+  display: block;
+  width: 100%;
+}
+
+.field > * {
+  width: 100%;
+}
