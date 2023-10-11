@@ -159,3 +159,28 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
+
+.page {
+  max-width: 400px;
+  margin: 10px auto;
+  border: 2px solid gray;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul li {
+  list-style: none;
+}
+
+.actions > * {
+  padding: 10px 15px;
+  background-color: gray;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  color: #ffff;
+  border: none;
+}
