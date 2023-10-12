@@ -193,3 +193,9 @@ ul li {
 .field > * {
   width: 100%;
 }
+
+.inline {
+  margin-block: 10px;
+  display: flex;
+  flex-direction: row;
+}

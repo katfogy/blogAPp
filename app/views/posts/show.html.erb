@@ -1,6 +1,9 @@
 <div class="post-details-card">
   <div class="single-post-info border-deco">
     <div class="title-details d-flex">
+    <% if can? :destroy, @post %>
+        <%= button_to "Delete this post", user_post_path(@post.author, @post), method: :delete %>
+      <%end%>
       <p><%= @post.title %> by <%= @post.author.name%></p>
       <div>
         <span>All Comments: <%= @post.comments_counter%></span>
@@ -19,7 +22,9 @@
 
   <div class="comments-card border-deco">
     <% @post.recent_comments.includes(:author).each do |comment|%>
-      <p class="d-flex"><span><%= comment.author.name %>:</span><span><%= comment.text %></span></p>
+      <p class="d-flex"><span><%= comment.author.name %>:</span><span><%= comment.text %><% if can? :delete, comment %>
+            <%= button_to "Delete this comment", user_post_comment_path(comment.author, comment.post, comment), method: :delete %>
+          <%end%></span></p>
     <% end %>
   </div>
   <%= render template: 'comments/new', post_id: @post.id %>
