@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
   end
@@ -22,6 +24,15 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    Comment.where(post_id: @post.id).destroy_all
+    Like.where(post_id: @post.id).destroy_all
+    @post.destroy
+    flash[:success] = 'Post Has been deleted'
+    redirect_to user_path(@post.author), notice: 'Deleted!'
   end
 
   private
