@@ -1,12 +1,11 @@
 class Api::V1::CommentsController < ActionController::API
-  before_action :authenticate_user!, :find_user_with_post
-
   def index
-    @comments = @post.comments
-    render json: @comments
+    comments = Comment.where(author_id: params[:user_id])
+    render json: comments, status: :ok
   end
 
   def create
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     @comment.author = @user
 
@@ -21,10 +20,5 @@ class Api::V1::CommentsController < ActionController::API
 
   def comment_params
     params.require(:comment).permit(:text)
-  end
-
-  def find_user_with_post
-    @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:post_id])
   end
 end
