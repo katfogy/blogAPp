@@ -1,5 +1,5 @@
 class Api::V1::CommentsController < ActionController::API
-  before_action :find_user_and_post
+  before_action :authenticate_user!, :find_user_with_post
 
   def index
     @comments = @post.comments
@@ -23,7 +23,7 @@ class Api::V1::CommentsController < ActionController::API
     params.require(:comment).permit(:text)
   end
 
-  def find_user_and_post
+  def find_user_with_post
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:post_id])
   end
